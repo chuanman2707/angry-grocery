@@ -1,17 +1,16 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
+import BackgroundSection from '../components/Globals/backgroundSection'
 import SEO from "../components/seo"
 
 const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-
-    </div>
+  <BackgroundSection 
+  img={data.img.childImageSharp.fluid} 
+  title="Angry Grocery" 
+  styleClass="default-background"/>
   </Layout>
 )
 export const query = graphql`
