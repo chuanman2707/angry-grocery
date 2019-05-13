@@ -31,8 +31,22 @@ export default class Menu extends Component {
         <section className="menu-py-5">
           <div className="container">
             <Title title="best of our menu" />
-            <div className="row">
+            <div className="row mb-5">
               {/* Categories */}
+              <div className="col-10 mx-auto text-center">
+                {this.state.categories.map((category, index) => {
+                  return (
+                    <button
+                      type="button"
+                      key={index}
+                      className="btn btn-yellow text-capitalize m-3"
+                      onClick={this.handleItems(category)}
+                    >
+                      {category}
+                    </button>
+                  )
+                })}
+              </div>
               {/* items */}
               {this.state.ticketItems.map(({ node }) => {
                 return (
