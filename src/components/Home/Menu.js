@@ -20,7 +20,18 @@ export default class Menu extends Component {
               {/* Categories */}
               {/* items */}
               {this.state.ticketItems.map(({ node }) => {
-                return <div key={node.id} className="" />
+                return (
+                  <div
+                    key={node.id}
+                    className="col-11 col-md-6 my-3 d-flex
+                  mx-auto text-center"
+                  >
+                    <div>
+                      <Img fixed={node.image.fixed} />
+                    </div>
+                    <div className="flex-grow-1 px-3" />
+                  </div>
+                )
               })}
             </div>
           </div>
